@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css</title>
+</head>
+<style>
+    body {
+        height: 100vh;
+        margin: 0;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 16px;
+    }
+
+    .logo {
+        flex: 1;
+        margin: auto 20px;
+    }
+
+    .navbar {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        display: flex;
+        box-shadow: 0 7px 10px #dedede;
+        position:fixed;
+        top: 0;
+        width: 100%;
+        font-size: 14px;
+        background: #fff;
+        z-index: 1;
+    }
+
+    li {
+        justify-content: flex-end;
+    }
+
+    li a {
+        display: inline-block;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    li a:hover {
+        background-color: #e8eeef;
+    }
+
+    .box-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .box {
+        /*flex-basis: 25%;*/
+        padding: 5px;
+        box-sizing: border-box;
+        position: relative;
+    }
+
+    .box span {
+        background: #000;
+        color: #fff;
+        font-size: 0.75rem;
+        padding: 6px;
+        position: absolute;
+        bottom: 8px;
+        right: 5px;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    .content {
+        margin: 8%;
+    }
+
+    .name {
+        font-size: 18px;
+        font-weight: bold;
+        margin: 10px 0;
+    }
+
+    .position {
+        font-size: 16px;
+        color: #999999;
+        margin: 10px 0;
+    }
+
+    .introduce {
+        line-height: 1.5;
+        margin: 10px 0;
+    }
+
+    .contact-btn {
+        height: 40px;
+    }
+
+    button {
+        border: 0;
+        cursor: pointer;
+        border-radius: 40px;
+        font-size: 16px;
+        width: 100%;
+        height: 100%;
+    }
+
+    button:hover {
+        background: #CCCCCC;
+    }
+    @media(max-width: 767px) {
+        .box {
+            flex-basis: 100%;
+        }
+    }
+
+    /* 大屏mobile和小部分平板 */
+    @media only screen and (max-width: 767px) and (min-width: 540px) {
+        html {
+            font-size: 75%;
+        }
+        .box {
+            flex-basis: 50%;
+        }
+    }
+
+    /* 大部分平板 */
+    @media only screen and (min-width: 768px) and (max-width: 992px) {
+        html {
+            font-size: 87.5%;
+        }
+        .box {
+            flex-basis: 50%;
+        }
+    }
+
+    /* 大部分mobile */
+    @media only screen and (max-width: 539px) and (orientation: portrait) {
+        html {
+            font-size: calc(100/375 * 12vw);  /* mobile 以设计图iphone X尺寸为例： 1px = 100/375vw  12px = 3.2vw = 1rem */
+        }
+        .box {
+            flex-basis: 100%;
+        }
+    }
+
+    @media only screen and (min-width: 1200px) {
+        .box {
+            flex-basis: 25%;
+        }
+    }
+</style>
+<body>
+    <div style="float: top">
+        <ul class="navbar">
+            <div class="logo"><strong>BR</strong>&nbsp;&nbsp;Architects</div>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <div style="margin-top:40px;">
+        <img src="images/architect.jpeg">
+            <h3 id="projects">Projects</h3>
+            <div class="box-wrapper">
+                <div class="box">
+                    <img src="images/house2.jpeg" alt="">
+                    <span>Summer House</span>
+                </div>
+                <div class="box">
+                    <img src="images/house3.jpeg" alt="">
+                    <span>Brick House</span>
+                </div>
+                <div class="box">
+                    <img src="images/house4.jpeg" alt="">
+                    <span>Renovated</span>
+                </div>
+                <div class="box">
+                    <img src="images/house5.jpeg" alt="">
+                    <span>Barn House</span>
+                </div>
+                <div class="box">
+                    <img src="images/house2.jpeg" alt="">
+                    <span>Summer House</span>
+                </div>
+                <div class="box">
+                    <img src="images/house3.jpeg" alt="">
+                    <span>Brick House</span>
+                </div>
+                <div class="box">
+                    <img src="images/house4.jpeg" alt="">
+                    <span>Renovated</span>
+                </div>
+                <div class="box">
+                    <img src="images/house5.jpeg" alt="">
+                    <span>Barn House</span>
+                </div>
+            </div>
+            <h3 style="margin: 30px 0;" id="about">About</h3>
+            <span style="line-height: 1.5;">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </span>
+            <div class="box-wrapper" style="margin-top:10px;">
+                <div class="box">
+                    <img src="images/team1.jpeg" alt="">
+                    <div class="name">John Doe</div>
+                    <div class="position">CEO & Founder</div>
+                    <div class="introduce">Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</div>
+                    <div class="contact-btn">
+                        <button type="button">Contact</button>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="images/team2.jpeg" alt="">
+                    <div class="name">John Doe</div>
+                    <div class="position">Architect</div>
+                    <div class="introduce">Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</div>
+                    <div class="contact-btn">
+                        <button type="button">Contact</button>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="images/team3.jpeg" alt="">
+                    <div class="name">Mike Ross</div>
+                    <div class="position">Architect</div>
+                    <div class="introduce">Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</div>
+                    <div class="contact-btn">
+                        <button type="button">Contact</button>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="images/team4.jpeg" alt="">
+                    <div class="name">Dan Star</div>
+                    <div class="position">Architect</div>
+                    <div class="introduce">Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</div>
+                    <div class="contact-btn">
+                        <button type="button">Contact</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
