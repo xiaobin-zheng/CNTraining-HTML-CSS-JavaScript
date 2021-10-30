@@ -47,13 +47,17 @@ question4();
 
 //问题5
 function fn(a) {
+    // 输出 ƒ a() {} 是因为函数提升
     console.log(a);
     var a = 666;
+    // 正常将a定义并赋值为666 所以输出666
     console.log(a);
     function a() {}
+    // 因为此处的a已经进行函数提升 所以这里取用的a还是666
     console.log(a);
 
     var b = function() {};
+    // 正常定义b 并赋值 不涉及函数提升  正常输出ƒ () {}
     console.log(b);
     function c() {}
 }
