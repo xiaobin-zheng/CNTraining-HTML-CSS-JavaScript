@@ -142,7 +142,7 @@ function createDeleteButton(id) {
 }
 
 function getItemCount() {
-    return itemCount;
+    return itemCount
 }
 
 function setItemCount(newItemCount) {

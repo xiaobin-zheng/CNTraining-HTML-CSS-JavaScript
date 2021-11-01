@@ -111,9 +111,9 @@ input:invalid {
     -webkit-appearance: none;
     outline: none;
     cursor: pointer;
-    top: 61%;
+    top: 50%;
     left: 3%;
-    transform: scale(1.75) translate(60%, -41%);
+    transform: scale(1.25) translate(60%, -41%);
     position: absolute;
     margin: 0;
 }
@@ -140,7 +140,7 @@ input:invalid {
     justify-content: space-around;
     align-items: center;
     height: 100%;
-    width: 35%;
+    width: 45%;
 }
 
 .btn-group [class*='-btn'].active {
