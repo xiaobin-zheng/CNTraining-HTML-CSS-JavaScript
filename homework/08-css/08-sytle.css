@@ -1,0 +1,195 @@
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    margin: 0;
+}
+
+img {
+    width: 100%;
+}
+
+.navbar-top {
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    box-shadow: 0 7px 10px #dedede;
+    top: 0;
+}
+
+.navbar-top-logo__text {
+    flex: 1;
+    margin: auto 20px;
+}
+
+.navbar-top__list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    font-size: 14px;
+    background: #fff;
+}
+
+.navbar-top__list_item {
+    justify-content: flex-end;
+}
+
+.navbar-top__list_item a {
+    display: inline-block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar-top__list_item a:hover {
+    background-color: #e8eeef;
+}
+
+.content {
+    margin: 8%;
+}
+
+.content-title {
+    margin: 30px 0;
+}
+
+.content-box-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.content-box-img {
+    padding: 5px;
+    box-sizing: border-box;
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background-size: cover;
+    background-clip: content-box;
+    background-repeat: no-repeat;
+}
+
+.content-box-img span {
+    background: #000;
+    color: #fff;
+    font-size: 0.75rem;
+    padding: 6px;
+    position: absolute;
+    bottom: 8px;
+    right: 5px;
+}
+
+.content__text {
+    line-height: 1.5;
+}
+
+.content-box-profile-wrapper {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.content-box-profile {
+    flex-basis: 25%;
+    padding: 5px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.content-box-profile-name__text {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.content-box-profile-position__text {
+    font-size: 16px;
+    color: #999999;
+    margin: 10px 0;
+}
+
+.content-box-profile-introduce__text {
+    line-height: 1.5;
+    margin: 10px 0;
+}
+
+.content-box-profile-contact__button {
+    height: 40px;
+}
+
+button {
+    border: 0;
+    cursor: pointer;
+    border-radius: 40px;
+    font-size: 16px;
+    width: 100%;
+    height: 100%;
+}
+
+button:hover {
+    background: #CCCCCC;
+}
+
+@media(max-width: 767px) {
+    .content-box-img {
+        flex-basis: 100%;
+    }
+    .content-box-profile {
+        flex-basis: 100%;
+    }
+}
+
+/* 大屏mobile和小部分平板 */
+
+@media only screen and (max-width: 767px) and (min-width: 540px) {
+    html {
+        font-size: 75%;
+    }
+    .content-box-img {
+        flex-basis: 50%;
+    }
+    .content-box-profile {
+        flex-basis: 50%;
+    }
+}
+
+/* 大部分平板 */
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    html {
+        font-size: 87.5%;
+    }
+    .content-box-img {
+        flex-basis: 50%;
+    }
+    .content-box-profile {
+        flex-basis: 50%;
+    }
+}
+
+/* 大部分mobile */
+
+@media only screen and (max-width: 539px) and (orientation: portrait) {
+    html {
+        font-size: calc(100/375 * 12vw);
+        /* mobile 以设计图iphone X尺寸为例： 1px = 100/375vw  12px = 3.2vw = 1rem */
+    }
+    .content-box-img {
+        flex-basis: 100%;
+    }
+    .content-box-profile {
+        flex-basis: 100%;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .content-box-img {
+        flex-basis: 25%;
+    }
+    .content-box-profile {
+        flex-basis: 25%;
+    }
+}
